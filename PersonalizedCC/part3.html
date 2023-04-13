@@ -1,0 +1,428 @@
+<!doctype html>
+    <head>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body style="text-align: -webkit-center">
+        <div style="text-align: -webkit-left;">
+			<ul>
+                <li class="nav"><a href="index.html" >Part 1</a></li>
+                <li class="nav"><a href="part2.html" >Part 2</a></li>
+                <li class="nav"><a href="part3.html" style="background-color: #27cece;" >Part 3</a></li>
+            </ul>
+		</div>
+        </table>
+        <br>
+        <h2 >Evaluating Wb_sRGB with MSE </h2>
+        <br> <table ><tbody> 
+            <tr><td colspan="6"> <img src="data/part3/ground_truth/8D5U5534_G_AS.png" width="300px"></td> </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5534_S_AS.jpg" width="300px"><br><span>1.09737693e+10</span><br><span>8D5U5534_S_AS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5534_T_CS.jpg" width="300px"><br><span>1.09654885e+10</span><br><span>8D5U5534_T_CS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5534_S_P.jpg" width="300px"><br><span>1.09641786e+10</span><br><span>8D5U5534_S_P.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5534_C_FF.jpg" width="300px"><br><span>1.09649916e+10</span><br><span>8D5U5534_C_FF.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5534_S_A4.jpg" width="300px"><br><span>1.09669787e+10</span><br><span>8D5U5534_S_A4.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5534_D_L.jpg" width="300px"><br><span>1.09622037e+10</span><br><span>8D5U5534_D_L.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5534_F_N.jpg" width="300px"><br><span>1.09645894e+10</span><br><span>8D5U5534_F_N.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5534_F_L.jpg" width="300px"><br><span>1.09647341e+10</span><br><span>8D5U5534_F_L.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5534_D_N.jpg" width="300px"><br><span>1.09640247e+10</span><br><span>8D5U5534_D_N.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5534_C_A4.jpg" width="300px"><br><span>1.09699581e+10</span><br><span>8D5U5534_C_A4.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5534_C_N.jpg" width="300px"><br><span>1.09648161e+10</span><br><span>8D5U5534_C_N.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5534_C_L.jpg" width="300px"><br><span>1.09611156e+10</span><br><span>8D5U5534_C_L.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5534_F_CS.jpg" width="300px"><br><span>1.09642944e+10</span><br><span>8D5U5534_F_CS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5534_C_AS.jpg" width="300px"><br><span>1.09727098e+10</span><br><span>8D5U5534_C_AS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5534_D_CS.jpg" width="300px"><br><span>1.0958584e+10</span><br><span>8D5U5534_D_CS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5534_S_FF.jpg" width="300px"><br><span>1.09648699e+10</span><br><span>8D5U5534_S_FF.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5534_T_P.jpg" width="300px"><br><span>1.09649379e+10</span><br><span>8D5U5534_T_P.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5534_D_A4.jpg" width="300px"><br><span>1.09694016e+10</span><br><span>8D5U5534_D_A4.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5534_C_P.jpg" width="300px"><br><span>1.09636572e+10</span><br><span>8D5U5534_C_P.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5534_F_AS.jpg" width="300px"><br><span>1.09732816e+10</span><br><span>8D5U5534_F_AS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5534_D_AS.jpg" width="300px"><br><span>1.09718247e+10</span><br><span>8D5U5534_D_AS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5534_T_L.jpg" width="300px"><br><span>1.09658221e+10</span><br><span>8D5U5534_T_L.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5534_C_CS.jpg" width="300px"><br><span>1.09594773e+10</span><br><span>8D5U5534_C_CS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5534_T_FF.jpg" width="300px"><br><span>1.09668972e+10</span><br><span>8D5U5534_T_FF.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5534_F_A4.jpg" width="300px"><br><span>1.09738839e+10</span><br><span>8D5U5534_F_A4.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5534_T_N.jpg" width="300px"><br><span>1.0967711e+10</span><br><span>8D5U5534_T_N.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5534_T_AS.jpg" width="300px"><br><span>1.09712277e+10</span><br><span>8D5U5534_T_AS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5534_S_N.jpg" width="300px"><br><span>1.09642785e+10</span><br><span>8D5U5534_S_N.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5534_S_CS.jpg" width="300px"><br><span>1.09595198e+10</span><br><span>8D5U5534_S_CS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5534_D_FF.jpg" width="300px"><br><span>1.09638256e+10</span><br><span>8D5U5534_D_FF.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5534_S_L.jpg" width="300px"><br><span>1.09556216e+10</span><br><span>8D5U5534_S_L.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5534_T_A4.jpg" width="300px"><br><span>1.09725562e+10</span><br><span>8D5U5534_T_A4.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5534_F_FF.jpg" width="300px"><br><span>1.09646256e+10</span><br><span>8D5U5534_F_FF.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5534_F_P.jpg" width="300px"><br><span>1.09642529e+10</span><br><span>8D5U5534_F_P.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5534_D_P.jpg" width="300px"><br><span>1.09608255e+10</span><br><span>8D5U5534_D_P.jpg</span></td>
+            </tbody></table> <br> 
+            <br> <table ><tbody> 
+            <tr><td colspan="6"> <img src="data/part3/ground_truth/8D5U5589_G_AS.png" width="300px"></td> </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5589_S_N.jpg" width="300px"><br><span>9.25370495e+09</span><br><span>8D5U5589_S_N.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5589_C_A4.jpg" width="300px"><br><span>9.25657945e+09</span><br><span>8D5U5589_C_A4.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5589_F_CS.jpg" width="300px"><br><span>9.253273e+09</span><br><span>8D5U5589_F_CS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5589_S_L.jpg" width="300px"><br><span>9.25017495e+09</span><br><span>8D5U5589_S_L.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5589_D_CS.jpg" width="300px"><br><span>9.25064244e+09</span><br><span>8D5U5589_D_CS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5589_F_P.jpg" width="300px"><br><span>9.24940898e+09</span><br><span>8D5U5589_F_P.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5589_C_AS.jpg" width="300px"><br><span>9.2572728e+09</span><br><span>8D5U5589_C_AS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5589_S_FF.jpg" width="300px"><br><span>9.25080536e+09</span><br><span>8D5U5589_S_FF.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5589_D_P.jpg" width="300px"><br><span>9.24885241e+09</span><br><span>8D5U5589_D_P.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5589_T_CS.jpg" width="300px"><br><span>9.2532437e+09</span><br><span>8D5U5589_T_CS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5589_S_AS.jpg" width="300px"><br><span>9.25693303e+09</span><br><span>8D5U5589_S_AS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5589_C_P.jpg" width="300px"><br><span>9.25112335e+09</span><br><span>8D5U5589_C_P.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5589_C_FF.jpg" width="300px"><br><span>9.25141099e+09</span><br><span>8D5U5589_C_FF.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5589_S_A4.jpg" width="300px"><br><span>9.25611823e+09</span><br><span>8D5U5589_S_A4.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5589_T_L.jpg" width="300px"><br><span>9.25383962e+09</span><br><span>8D5U5589_T_L.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5589_T_N.jpg" width="300px"><br><span>9.25524957e+09</span><br><span>8D5U5589_T_N.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5589_S_CS.jpg" width="300px"><br><span>9.25096679e+09</span><br><span>8D5U5589_S_CS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5589_T_AS.jpg" width="300px"><br><span>9.25830323e+09</span><br><span>8D5U5589_T_AS.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5589_C_N.jpg" width="300px"><br><span>9.25397982e+09</span><br><span>8D5U5589_C_N.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5589_C_L.jpg" width="300px"><br><span>9.25150845e+09</span><br><span>8D5U5589_C_L.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5589_D_FF.jpg" width="300px"><br><span>9.25201158e+09</span><br><span>8D5U5589_D_FF.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5589_F_FF.jpg" width="300px"><br><span>9.2533548e+09</span><br><span>8D5U5589_F_FF.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5589_T_A4.jpg" width="300px"><br><span>9.25852596e+09</span><br><span>8D5U5589_T_A4.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5589_T_P.jpg" width="300px"><br><span>9.250015e+09</span><br><span>8D5U5589_T_P.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5589_S_P.jpg" width="300px"><br><span>9.24922964e+09</span><br><span>8D5U5589_S_P.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5589_D_A4.jpg" width="300px"><br><span>9.25676885e+09</span><br><span>8D5U5589_D_A4.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5589_F_AS.jpg" width="300px"><br><span>9.25651352e+09</span><br><span>8D5U5589_F_AS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5589_D_L.jpg" width="300px"><br><span>9.25096745e+09</span><br><span>8D5U5589_D_L.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5589_C_CS.jpg" width="300px"><br><span>9.25137698e+09</span><br><span>8D5U5589_C_CS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5589_F_N.jpg" width="300px"><br><span>9.25322678e+09</span><br><span>8D5U5589_F_N.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5589_D_AS.jpg" width="300px"><br><span>9.2566763e+09</span><br><span>8D5U5589_D_AS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5589_F_A4.jpg" width="300px"><br><span>9.25813755e+09</span><br><span>8D5U5589_F_A4.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5589_T_FF.jpg" width="300px"><br><span>9.2544828e+09</span><br><span>8D5U5589_T_FF.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5589_F_L.jpg" width="300px"><br><span>9.25302315e+09</span><br><span>8D5U5589_F_L.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5589_D_N.jpg" width="300px"><br><span>9.25327106e+09</span><br><span>8D5U5589_D_N.jpg</span></td>
+            </tbody></table> <br> 
+            <br> <table ><tbody> 
+            <tr><td colspan="6"> <img src="data/part3/ground_truth/8D5U5558_G_AS.png" width="300px"></td> </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5558_F_CS.jpg" width="300px"><br><span>1.30879591e+10</span><br><span>8D5U5558_F_CS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5558_C_A4.jpg" width="300px"><br><span>1.31085272e+10</span><br><span>8D5U5558_C_A4.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5558_T_L.jpg" width="300px"><br><span>1.30918966e+10</span><br><span>8D5U5558_T_L.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5558_S_FF.jpg" width="300px"><br><span>1.31088596e+10</span><br><span>8D5U5558_S_FF.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5558_D_CS.jpg" width="300px"><br><span>1.30988502e+10</span><br><span>8D5U5558_D_CS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5558_T_N.jpg" width="300px"><br><span>1.30845388e+10</span><br><span>8D5U5558_T_N.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5558_C_AS.jpg" width="300px"><br><span>1.31094509e+10</span><br><span>8D5U5558_C_AS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5558_S_N.jpg" width="300px"><br><span>1.31084476e+10</span><br><span>8D5U5558_S_N.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5558_C_FF.jpg" width="300px"><br><span>1.31078541e+10</span><br><span>8D5U5558_C_FF.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5558_T_CS.jpg" width="300px"><br><span>1.30820436e+10</span><br><span>8D5U5558_T_CS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5558_S_L.jpg" width="300px"><br><span>1.31197102e+10</span><br><span>8D5U5558_S_L.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5558_S_AS.jpg" width="300px"><br><span>1.31096804e+10</span><br><span>8D5U5558_S_AS.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5558_F_P.jpg" width="300px"><br><span>1.3087493e+10</span><br><span>8D5U5558_F_P.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5558_D_P.jpg" width="300px"><br><span>1.31061794e+10</span><br><span>8D5U5558_D_P.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5558_S_A4.jpg" width="300px"><br><span>1.31071427e+10</span><br><span>8D5U5558_S_A4.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5558_D_FF.jpg" width="300px"><br><span>1.31100963e+10</span><br><span>8D5U5558_D_FF.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5558_T_AS.jpg" width="300px"><br><span>1.30914207e+10</span><br><span>8D5U5558_T_AS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5558_F_N.jpg" width="300px"><br><span>1.30860112e+10</span><br><span>8D5U5558_F_N.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5558_D_L.jpg" width="300px"><br><span>1.31047219e+10</span><br><span>8D5U5558_D_L.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5558_D_N.jpg" width="300px"><br><span>1.30988915e+10</span><br><span>8D5U5558_D_N.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5558_F_FF.jpg" width="300px"><br><span>1.30851704e+10</span><br><span>8D5U5558_F_FF.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5558_T_A4.jpg" width="300px"><br><span>1.30893498e+10</span><br><span>8D5U5558_T_A4.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5558_F_L.jpg" width="300px"><br><span>1.30891572e+10</span><br><span>8D5U5558_F_L.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5558_C_N.jpg" width="300px"><br><span>1.31049416e+10</span><br><span>8D5U5558_C_N.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5558_F_AS.jpg" width="300px"><br><span>1.30913304e+10</span><br><span>8D5U5558_F_AS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5558_C_L.jpg" width="300px"><br><span>1.3111869e+10</span><br><span>8D5U5558_C_L.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5558_D_A4.jpg" width="300px"><br><span>1.31031716e+10</span><br><span>8D5U5558_D_A4.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5558_F_A4.jpg" width="300px"><br><span>1.3091352e+10</span><br><span>8D5U5558_F_A4.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5558_T_FF.jpg" width="300px"><br><span>1.30847352e+10</span><br><span>8D5U5558_T_FF.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5558_C_CS.jpg" width="300px"><br><span>1.31017704e+10</span><br><span>8D5U5558_C_CS.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5558_T_P.jpg" width="300px"><br><span>1.3094795e+10</span><br><span>8D5U5558_T_P.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5558_D_AS.jpg" width="300px"><br><span>1.31040013e+10</span><br><span>8D5U5558_D_AS.jpg</span></td>
+            </tbody></table> <br> 
+            <br> <table ><tbody> 
+            <tr><td colspan="6"> <img src="data/part3/ground_truth/8D5U5608_G_AS.png" width="300px"></td> </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5608_F_CS.jpg" width="300px"><br><span>1.42320245e+10</span><br><span>8D5U5608_F_CS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5608_C_A4.jpg" width="300px"><br><span>1.42397701e+10</span><br><span>8D5U5608_C_A4.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5608_C_P.jpg" width="300px"><br><span>1.42314222e+10</span><br><span>8D5U5608_C_P.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5608_S_FF.jpg" width="300px"><br><span>1.42322557e+10</span><br><span>8D5U5608_S_FF.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5608_T_N.jpg" width="300px"><br><span>1.42327732e+10</span><br><span>8D5U5608_T_N.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5608_C_AS.jpg" width="300px"><br><span>1.42406364e+10</span><br><span>8D5U5608_C_AS.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5608_D_CS.jpg" width="300px"><br><span>1.42312785e+10</span><br><span>8D5U5608_D_CS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5608_C_FF.jpg" width="300px"><br><span>1.4233123e+10</span><br><span>8D5U5608_C_FF.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5608_S_L.jpg" width="300px"><br><span>1.42307575e+10</span><br><span>8D5U5608_S_L.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5608_S_AS.jpg" width="300px"><br><span>1.42390878e+10</span><br><span>8D5U5608_S_AS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5608_S_N.jpg" width="300px"><br><span>1.42334652e+10</span><br><span>8D5U5608_S_N.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5608_T_CS.jpg" width="300px"><br><span>1.42328615e+10</span><br><span>8D5U5608_T_CS.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5608_D_P.jpg" width="300px"><br><span>1.42302895e+10</span><br><span>8D5U5608_D_P.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5608_S_A4.jpg" width="300px"><br><span>1.42384418e+10</span><br><span>8D5U5608_S_A4.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5608_F_P.jpg" width="300px"><br><span>1.42294278e+10</span><br><span>8D5U5608_F_P.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5608_D_FF.jpg" width="300px"><br><span>1.4232895e+10</span><br><span>8D5U5608_D_FF.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5608_T_AS.jpg" width="300px"><br><span>1.42393122e+10</span><br><span>8D5U5608_T_AS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5608_S_P.jpg" width="300px"><br><span>1.42289979e+10</span><br><span>8D5U5608_S_P.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5608_S_CS.jpg" width="300px"><br><span>1.42303312e+10</span><br><span>8D5U5608_S_CS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5608_F_L.jpg" width="300px"><br><span>1.42321244e+10</span><br><span>8D5U5608_F_L.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5608_D_N.jpg" width="300px"><br><span>1.42337826e+10</span><br><span>8D5U5608_D_N.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5608_F_FF.jpg" width="300px"><br><span>1.42333195e+10</span><br><span>8D5U5608_F_FF.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5608_T_A4.jpg" width="300px"><br><span>1.42391501e+10</span><br><span>8D5U5608_T_A4.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5608_D_L.jpg" width="300px"><br><span>1.42297409e+10</span><br><span>8D5U5608_D_L.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5608_F_N.jpg" width="300px"><br><span>1.42329373e+10</span><br><span>8D5U5608_F_N.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5608_F_AS.jpg" width="300px"><br><span>1.42390644e+10</span><br><span>8D5U5608_F_AS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5608_C_L.jpg" width="300px"><br><span>1.4231863e+10</span><br><span>8D5U5608_C_L.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5608_D_A4.jpg" width="300px"><br><span>1.42389104e+10</span><br><span>8D5U5608_D_A4.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5608_C_N.jpg" width="300px"><br><span>1.42354822e+10</span><br><span>8D5U5608_C_N.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5608_F_A4.jpg" width="300px"><br><span>1.4240302e+10</span><br><span>8D5U5608_F_A4.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5608_T_FF.jpg" width="300px"><br><span>1.42346933e+10</span><br><span>8D5U5608_T_FF.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5608_D_AS.jpg" width="300px"><br><span>1.42387644e+10</span><br><span>8D5U5608_D_AS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5608_C_CS.jpg" width="300px"><br><span>1.42318826e+10</span><br><span>8D5U5608_C_CS.jpg</span></td>
+            </tbody></table> <br> 
+            <br> <table ><tbody> 
+            <tr><td colspan="6"> <img src="data/part3/ground_truth/8D5U5545_G_AS.png" width="300px"></td> </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5545_C_L.jpg" width="300px"><br><span>1.1678221e+10</span><br><span>8D5U5545_C_L.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5545_C_AS.jpg" width="300px"><br><span>1.16799154e+10</span><br><span>8D5U5545_C_AS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5545_C_N.jpg" width="300px"><br><span>1.16719402e+10</span><br><span>8D5U5545_C_N.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5545_S_FF.jpg" width="300px"><br><span>1.16824741e+10</span><br><span>8D5U5545_S_FF.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5545_T_P.jpg" width="300px"><br><span>1.16661968e+10</span><br><span>8D5U5545_T_P.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5545_C_A4.jpg" width="300px"><br><span>1.16763971e+10</span><br><span>8D5U5545_C_A4.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5545_F_CS.jpg" width="300px"><br><span>1.16636319e+10</span><br><span>8D5U5545_F_CS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5545_F_L.jpg" width="300px"><br><span>1.16639102e+10</span><br><span>8D5U5545_F_L.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5545_D_N.jpg" width="300px"><br><span>1.16696144e+10</span><br><span>8D5U5545_D_N.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5545_T_CS.jpg" width="300px"><br><span>1.16647372e+10</span><br><span>8D5U5545_T_CS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5545_S_AS.jpg" width="300px"><br><span>1.1680901e+10</span><br><span>8D5U5545_S_AS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5545_D_L.jpg" width="300px"><br><span>1.16797205e+10</span><br><span>8D5U5545_D_L.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5545_F_N.jpg" width="300px"><br><span>1.1660081e+10</span><br><span>8D5U5545_F_N.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5545_C_FF.jpg" width="300px"><br><span>1.16825374e+10</span><br><span>8D5U5545_C_FF.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5545_S_L.jpg" width="300px"><br><span>1.16832753e+10</span><br><span>8D5U5545_S_L.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5545_F_FF.jpg" width="300px"><br><span>1.16607296e+10</span><br><span>8D5U5545_F_FF.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5545_T_A4.jpg" width="300px"><br><span>1.16673112e+10</span><br><span>8D5U5545_T_A4.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5545_T_AS.jpg" width="300px"><br><span>1.16691482e+10</span><br><span>8D5U5545_T_AS.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5545_F_P.jpg" width="300px"><br><span>1.1664421e+10</span><br><span>8D5U5545_F_P.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5545_D_FF.jpg" width="300px"><br><span>1.16774548e+10</span><br><span>8D5U5545_D_FF.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5545_D_AS.jpg" width="300px"><br><span>1.16742969e+10</span><br><span>8D5U5545_D_AS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5545_F_A4.jpg" width="300px"><br><span>1.16665154e+10</span><br><span>8D5U5545_F_A4.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5545_T_FF.jpg" width="300px"><br><span>1.16621992e+10</span><br><span>8D5U5545_T_FF.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5545_T_N.jpg" width="300px"><br><span>1.16618992e+10</span><br><span>8D5U5545_T_N.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5545_D_A4.jpg" width="300px"><br><span>1.16726023e+10</span><br><span>8D5U5545_D_A4.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5545_T_L.jpg" width="300px"><br><span>1.16651014e+10</span><br><span>8D5U5545_T_L.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5545_F_AS.jpg" width="300px"><br><span>1.16660481e+10</span><br><span>8D5U5545_F_AS.jpg</span></td>
+            </tbody></table> <br> 
+            <br> <table ><tbody> 
+            <tr><td colspan="6"> <img src="data/part3/ground_truth/8D5U5533_G_AS.png" width="300px"></td> </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5533_C_AS.jpg" width="300px"><br><span>1.8282731e+10</span><br><span>8D5U5533_C_AS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5533_D_CS.jpg" width="300px"><br><span>1.82671872e+10</span><br><span>8D5U5533_D_CS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5533_S_FF.jpg" width="300px"><br><span>1.82827575e+10</span><br><span>8D5U5533_S_FF.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5533_C_P.jpg" width="300px"><br><span>1.82786768e+10</span><br><span>8D5U5533_C_P.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5533_C_A4.jpg" width="300px"><br><span>1.8281218e+10</span><br><span>8D5U5533_C_A4.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5533_T_N.jpg" width="300px"><br><span>1.82859513e+10</span><br><span>8D5U5533_T_N.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5533_T_L.jpg" width="300px"><br><span>1.82798725e+10</span><br><span>8D5U5533_T_L.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5533_F_CS.jpg" width="300px"><br><span>1.82822513e+10</span><br><span>8D5U5533_F_CS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5533_S_A4.jpg" width="300px"><br><span>1.82894371e+10</span><br><span>8D5U5533_S_A4.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5533_S_L.jpg" width="300px"><br><span>1.82845685e+10</span><br><span>8D5U5533_S_L.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5533_S_N.jpg" width="300px"><br><span>1.82796965e+10</span><br><span>8D5U5533_S_N.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5533_S_AS.jpg" width="300px"><br><span>1.82888803e+10</span><br><span>8D5U5533_S_AS.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5533_D_P.jpg" width="300px"><br><span>1.82765016e+10</span><br><span>8D5U5533_D_P.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5533_T_CS.jpg" width="300px"><br><span>1.82856038e+10</span><br><span>8D5U5533_T_CS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5533_C_FF.jpg" width="300px"><br><span>1.82766577e+10</span><br><span>8D5U5533_C_FF.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5533_F_P.jpg" width="300px"><br><span>1.82829505e+10</span><br><span>8D5U5533_F_P.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5533_T_A4.jpg" width="300px"><br><span>1.82939834e+10</span><br><span>8D5U5533_T_A4.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5533_F_FF.jpg" width="300px"><br><span>1.82871981e+10</span><br><span>8D5U5533_F_FF.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5533_S_P.jpg" width="300px"><br><span>1.82842784e+10</span><br><span>8D5U5533_S_P.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5533_T_AS.jpg" width="300px"><br><span>1.82961791e+10</span><br><span>8D5U5533_T_AS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5533_F_L.jpg" width="300px"><br><span>1.82846426e+10</span><br><span>8D5U5533_F_L.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5533_D_N.jpg" width="300px"><br><span>1.82680626e+10</span><br><span>8D5U5533_D_N.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5533_S_CS.jpg" width="300px"><br><span>1.82807531e+10</span><br><span>8D5U5533_S_CS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5533_D_FF.jpg" width="300px"><br><span>1.82701105e+10</span><br><span>8D5U5533_D_FF.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5533_D_L.jpg" width="300px"><br><span>1.8276773e+10</span><br><span>8D5U5533_D_L.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5533_F_N.jpg" width="300px"><br><span>1.82800802e+10</span><br><span>8D5U5533_F_N.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5533_D_AS.jpg" width="300px"><br><span>1.82782346e+10</span><br><span>8D5U5533_D_AS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5533_C_L.jpg" width="300px"><br><span>1.82851543e+10</span><br><span>8D5U5533_C_L.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5533_C_CS.jpg" width="300px"><br><span>1.82760908e+10</span><br><span>8D5U5533_C_CS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5533_T_FF.jpg" width="300px"><br><span>1.82917858e+10</span><br><span>8D5U5533_T_FF.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5533_F_A4.jpg" width="300px"><br><span>1.82862173e+10</span><br><span>8D5U5533_F_A4.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5533_C_N.jpg" width="300px"><br><span>1.82746759e+10</span><br><span>8D5U5533_C_N.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5533_D_A4.jpg" width="300px"><br><span>1.82750362e+10</span><br><span>8D5U5533_D_A4.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5533_T_P.jpg" width="300px"><br><span>1.8279816e+10</span><br><span>8D5U5533_T_P.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5533_F_AS.jpg" width="300px"><br><span>1.828546e+10</span><br><span>8D5U5533_F_AS.jpg</span></td>
+            </tbody></table> <br> 
+            <br> <table ><tbody> 
+            <tr><td colspan="6"> <img src="data/part3/ground_truth/8D5U5620_G_AS.png" width="300px"></td> </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5620_S_FF.jpg" width="300px"><br><span>1.33323405e+10</span><br><span>8D5U5620_S_FF.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5620_S_P.jpg" width="300px"><br><span>1.3318954e+10</span><br><span>8D5U5620_S_P.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5620_D_CS.jpg" width="300px"><br><span>1.33130289e+10</span><br><span>8D5U5620_D_CS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5620_F_CS.jpg" width="300px"><br><span>1.33145905e+10</span><br><span>8D5U5620_F_CS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5620_F_N.jpg" width="300px"><br><span>1.33204673e+10</span><br><span>8D5U5620_F_N.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5620_D_N.jpg" width="300px"><br><span>1.33206363e+10</span><br><span>8D5U5620_D_N.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5620_F_L.jpg" width="300px"><br><span>1.33256365e+10</span><br><span>8D5U5620_F_L.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5620_C_N.jpg" width="300px"><br><span>1.33194821e+10</span><br><span>8D5U5620_C_N.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5620_C_FF.jpg" width="300px"><br><span>1.33356686e+10</span><br><span>8D5U5620_C_FF.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5620_T_CS.jpg" width="300px"><br><span>1.33168818e+10</span><br><span>8D5U5620_T_CS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5620_T_P.jpg" width="300px"><br><span>1.33237676e+10</span><br><span>8D5U5620_T_P.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5620_T_A4.jpg" width="300px"><br><span>1.33289057e+10</span><br><span>8D5U5620_T_A4.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5620_F_FF.jpg" width="300px"><br><span>1.3332933e+10</span><br><span>8D5U5620_F_FF.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5620_T_L.jpg" width="300px"><br><span>1.33319207e+10</span><br><span>8D5U5620_T_L.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5620_D_FF.jpg" width="300px"><br><span>1.33390543e+10</span><br><span>8D5U5620_D_FF.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5620_T_AS.jpg" width="300px"><br><span>1.33287836e+10</span><br><span>8D5U5620_T_AS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5620_T_N.jpg" width="300px"><br><span>1.33224768e+10</span><br><span>8D5U5620_T_N.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5620_T_FF.jpg" width="300px"><br><span>1.33302778e+10</span><br><span>8D5U5620_T_FF.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5620_F_A4.jpg" width="300px"><br><span>1.33269283e+10</span><br><span>8D5U5620_F_A4.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5620_S_N.jpg" width="300px"><br><span>1.33198818e+10</span><br><span>8D5U5620_S_N.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5620_F_AS.jpg" width="300px"><br><span>1.33296226e+10</span><br><span>8D5U5620_F_AS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5620_F_P.jpg" width="300px"><br><span>1.33228662e+10</span><br><span>8D5U5620_F_P.jpg</span></td>
+            </tbody></table> <br> 
+            <br> <table ><tbody> 
+            <tr><td colspan="6"> <img src="data/part3/ground_truth/8D5U5536_G_AS.png" width="300px"></td> </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5536_F_A4.jpg" width="300px"><br><span>9.73466134e+09</span><br><span>8D5U5536_F_A4.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5536_T_FF.jpg" width="300px"><br><span>9.72545553e+09</span><br><span>8D5U5536_T_FF.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5536_D_AS.jpg" width="300px"><br><span>9.73238057e+09</span><br><span>8D5U5536_D_AS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5536_T_P.jpg" width="300px"><br><span>9.71963326e+09</span><br><span>8D5U5536_T_P.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5536_C_CS.jpg" width="300px"><br><span>9.72312733e+09</span><br><span>8D5U5536_C_CS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5536_C_N.jpg" width="300px"><br><span>9.72288936e+09</span><br><span>8D5U5536_C_N.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5536_F_AS.jpg" width="300px"><br><span>9.73249582e+09</span><br><span>8D5U5536_F_AS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5536_D_A4.jpg" width="300px"><br><span>9.73096859e+09</span><br><span>8D5U5536_D_A4.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5536_C_L.jpg" width="300px"><br><span>9.7228335e+09</span><br><span>8D5U5536_C_L.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5536_D_L.jpg" width="300px"><br><span>9.72576449e+09</span><br><span>8D5U5536_D_L.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5536_F_N.jpg" width="300px"><br><span>9.72672337e+09</span><br><span>8D5U5536_F_N.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5536_F_L.jpg" width="300px"><br><span>9.72093971e+09</span><br><span>8D5U5536_F_L.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5536_D_N.jpg" width="300px"><br><span>9.72559679e+09</span><br><span>8D5U5536_D_N.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5536_F_FF.jpg" width="300px"><br><span>9.72614988e+09</span><br><span>8D5U5536_F_FF.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5536_T_A4.jpg" width="300px"><br><span>9.73521161e+09</span><br><span>8D5U5536_T_A4.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5536_D_FF.jpg" width="300px"><br><span>9.72380142e+09</span><br><span>8D5U5536_D_FF.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5536_S_P.jpg" width="300px"><br><span>9.72307864e+09</span><br><span>8D5U5536_S_P.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5536_T_AS.jpg" width="300px"><br><span>9.73195944e+09</span><br><span>8D5U5536_T_AS.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5536_S_CS.jpg" width="300px"><br><span>9.72139903e+09</span><br><span>8D5U5536_S_CS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5536_F_P.jpg" width="300px"><br><span>9.72018742e+09</span><br><span>8D5U5536_F_P.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5536_D_P.jpg" width="300px"><br><span>9.72544426e+09</span><br><span>8D5U5536_D_P.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5536_S_A4.jpg" width="300px"><br><span>9.72917941e+09</span><br><span>8D5U5536_S_A4.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5536_C_FF.jpg" width="300px"><br><span>9.72103221e+09</span><br><span>8D5U5536_C_FF.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5536_S_N.jpg" width="300px"><br><span>9.72541604e+09</span><br><span>8D5U5536_S_N.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5536_S_L.jpg" width="300px"><br><span>9.72418074e+09</span><br><span>8D5U5536_S_L.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5536_S_AS.jpg" width="300px"><br><span>9.72832121e+09</span><br><span>8D5U5536_S_AS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5536_T_CS.jpg" width="300px"><br><span>9.72243157e+09</span><br><span>8D5U5536_T_CS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5536_T_L.jpg" width="300px"><br><span>9.72652518e+09</span><br><span>8D5U5536_T_L.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5536_S_FF.jpg" width="300px"><br><span>9.7230525e+09</span><br><span>8D5U5536_S_FF.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5536_C_AS.jpg" width="300px"><br><span>9.7282079e+09</span><br><span>8D5U5536_C_AS.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5536_T_N.jpg" width="300px"><br><span>9.72465958e+09</span><br><span>8D5U5536_T_N.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5536_D_CS.jpg" width="300px"><br><span>9.72384396e+09</span><br><span>8D5U5536_D_CS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5536_C_P.jpg" width="300px"><br><span>9.72292385e+09</span><br><span>8D5U5536_C_P.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5536_F_CS.jpg" width="300px"><br><span>9.72304759e+09</span><br><span>8D5U5536_F_CS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5536_C_A4.jpg" width="300px"><br><span>9.72815491e+09</span><br><span>8D5U5536_C_A4.jpg</span></td>
+            </tbody></table> <br> 
+            <br> <table ><tbody> 
+            <tr><td colspan="6"> <img src="data/part3/ground_truth/8D5U5547_G_AS.png" width="300px"></td> </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5547_F_L.jpg" width="300px"><br><span>1.12996028e+10</span><br><span>8D5U5547_F_L.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5547_D_N.jpg" width="300px"><br><span>1.13041234e+10</span><br><span>8D5U5547_D_N.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5547_D_FF.jpg" width="300px"><br><span>1.13002396e+10</span><br><span>8D5U5547_D_FF.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5547_S_CS.jpg" width="300px"><br><span>1.12953837e+10</span><br><span>8D5U5547_S_CS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5547_T_AS.jpg" width="300px"><br><span>1.12976572e+10</span><br><span>8D5U5547_T_AS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5547_D_L.jpg" width="300px"><br><span>1.13036478e+10</span><br><span>8D5U5547_D_L.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5547_F_N.jpg" width="300px"><br><span>1.12976171e+10</span><br><span>8D5U5547_F_N.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5547_T_A4.jpg" width="300px"><br><span>1.12989224e+10</span><br><span>8D5U5547_T_A4.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5547_F_FF.jpg" width="300px"><br><span>1.12984742e+10</span><br><span>8D5U5547_F_FF.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5547_S_P.jpg" width="300px"><br><span>1.1298694e+10</span><br><span>8D5U5547_S_P.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5547_F_AS.jpg" width="300px"><br><span>1.13022327e+10</span><br><span>8D5U5547_F_AS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5547_T_P.jpg" width="300px"><br><span>1.12920735e+10</span><br><span>8D5U5547_T_P.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5547_D_A4.jpg" width="300px"><br><span>1.13094397e+10</span><br><span>8D5U5547_D_A4.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5547_T_FF.jpg" width="300px"><br><span>1.12917295e+10</span><br><span>8D5U5547_T_FF.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5547_F_A4.jpg" width="300px"><br><span>1.13069858e+10</span><br><span>8D5U5547_F_A4.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5547_C_L.jpg" width="300px"><br><span>1.13028587e+10</span><br><span>8D5U5547_C_L.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5547_C_CS.jpg" width="300px"><br><span>1.12956673e+10</span><br><span>8D5U5547_C_CS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5547_C_N.jpg" width="300px"><br><span>1.13036629e+10</span><br><span>8D5U5547_C_N.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5547_D_AS.jpg" width="300px"><br><span>1.1310161e+10</span><br><span>8D5U5547_D_AS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5547_F_CS.jpg" width="300px"><br><span>1.12983637e+10</span><br><span>8D5U5547_F_CS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5547_T_N.jpg" width="300px"><br><span>1.12912887e+10</span><br><span>8D5U5547_T_N.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5547_T_L.jpg" width="300px"><br><span>1.12947185e+10</span><br><span>8D5U5547_T_L.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5547_C_A4.jpg" width="300px"><br><span>1.13097147e+10</span><br><span>8D5U5547_C_A4.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5547_S_FF.jpg" width="300px"><br><span>1.13000891e+10</span><br><span>8D5U5547_S_FF.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5547_D_CS.jpg" width="300px"><br><span>1.12975523e+10</span><br><span>8D5U5547_D_CS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5547_C_P.jpg" width="300px"><br><span>1.12996183e+10</span><br><span>8D5U5547_C_P.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5547_C_AS.jpg" width="300px"><br><span>1.13100481e+10</span><br><span>8D5U5547_C_AS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5547_D_P.jpg" width="300px"><br><span>1.1296393e+10</span><br><span>8D5U5547_D_P.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5547_C_FF.jpg" width="300px"><br><span>1.12999178e+10</span><br><span>8D5U5547_C_FF.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5547_T_CS.jpg" width="300px"><br><span>1.12942703e+10</span><br><span>8D5U5547_T_CS.jpg</span></td>
+            </tr>
+            <tr>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5547_S_AS.jpg" width="300px"><br><span>1.13082776e+10</span><br><span>8D5U5547_S_AS.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5547_F_P.jpg" width="300px"><br><span>1.12989832e+10</span><br><span>8D5U5547_F_P.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5547_S_L.jpg" width="300px"><br><span>1.13007428e+10</span><br><span>8D5U5547_S_L.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5547_S_A4.jpg" width="300px"><br><span>1.13083056e+10</span><br><span>8D5U5547_S_A4.jpg</span></td>
+            <td><img src="data/part3/Wb_sRGB_output/8D5U5547_S_N.jpg" width="300px"><br><span>1.13033393e+10</span><br><span>8D5U5547_S_N.jpg</span></td>
+            </tbody></table> <br> 
+                        
+       
+    </body>
+</html>
