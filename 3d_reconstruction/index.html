@@ -7,6 +7,7 @@
 			<ul>
 
                 <li class="nav"><a href="index.html" style="background-color: #27cece;">Part 1</a></li>
+                <li class="nav"><a href="part2.html">Part 2</a></li>
             </ul>
 		</div>
         </table>
@@ -17,36 +18,37 @@
 
     <table >
                 <tbody>
-                <tr>
-                <th>
-                    input images
-                </th>
-                <th>
-                    Output1
-                </th>
-                <th>
-                    Output2
-                </th>
-                <th>
-                    Output3
-                </th>
-
-                </tr>
-            
+               
                 <tr>
           
                     <td>
-                        <img src="data/part1/superman/superman_input.png" width="400em">
+                        <img src="data/part1/superman/setup/capture_setup.jpeg" width="400em">
+                        <p>Capture setup</p>
                     </td>
-            
+                    <td>
+                        <img src="data/part1/superman/superman_input.png" width="400em">
+                        <p>Sample dataset</p>
+                    </td>
+                    <td>
+                        <img src="data/part1/superman/setup/superman_screenshot.png" width="400em">
+                        <p>Colmap camera pose output</p>
+                    </td>
+                   
+                </tr>
+                <tr>
+          
+             
                     <td>
                         <img src="data/part1/superman/superman_normals_00010000_0_64.png" width="400em">
+                        <p>Iron Stage1 normal output</p>
                     </td>
                     <td>
-                        <img src="data/part1/superman/superman_validation_fine_00010000_0_64.png" width="400em">
+                        <img src="data/part1/superman/result/00010000_0_64.png" width="400em">
+                        <p>Iron Stage1 validation output: Ground Truth:Bottom, Iron prediction:Top</p>
                     </td>
                     <td>
-                        <img src="data/part1/superman/superman_logim_49500.png" width="400em">
+                        <img src="data/part1/superman/result/logim_45000.png" width="400em">
+                        <p>Iron Stage2 Texture material output</p>
                     </td>
                    
                 
@@ -54,11 +56,6 @@
                
         </tbody>
         </table>
-    
-        <iframe src="data/part1/superman/superman_00010000.html" style="
-        height: 75%;
-        width: 50%;"></iframe>
-        <br>
         <br>
         <h3>Experiment 2: Minion</h3>
 
@@ -98,14 +95,11 @@
                    
                 
                 </tr>
+                
                
         </tbody>
         </table>
-    
-        <iframe src="data/part1/minion/minion_00010000.html" style="
-        height: 75%;
-        width: 50%;"></iframe>
-        <br>
+
        <br>
        <h3>How to apply material texture to the output of the model above?</h3>
        <table >

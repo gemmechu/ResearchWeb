@@ -1,0 +1,233 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body style="text-align: -webkit-center">
+        <div style="text-align: -webkit-left;">
+			<ul>
+
+                <li class="nav"><a href="index.html">Part 1</a></li>
+                <li class="nav"><a href="part2.html" style="background-color: #27cece;">Part 2</a></li>
+            </ul>
+		</div>
+        <h2 >IRON Experiment with synthetic data</h2>
+        <div>
+			<ul>
+                <li class="nav"><a href="part2.html" >Two Cars</a></li>
+               <li class="nav"> <a href="part2b.html" style="background-color: #33de58;">Single doll</a></li>
+                <li class="nav"><a href="part2c.html">Two dolls</a></li>
+            </ul>
+		</div>
+        <h2>Summary</h2>
+        <table>
+            <tr>
+                <td style="text-align: left;" ><b>Dataset 1</b></td>
+                <td style="text-align: left;">
+                    - Output: Stage1 intermediate result showes it is working.
+                    <br>
+                    - Texture: Principled BSDF material using texture material provided by IRON as .exr file (Diffuse albedo, Specular albedo and Roughness)
+                </td>
+                
+            </tr>
+            <tr>
+                <td style="text-align: left;" ><b>Dataset 2</b></td>
+                <td style="text-align: left;">- Diffrence: from Dataset1 is just the change of Diffuse albedo .exr file with Perlin noise, keeping the other texture material the same(Specular albedo and Roughness) as dataset1. 
+                    <br>
+                    - Output: Stage1 intermediate result showes it is working.
+                    <br>
+                    - Texture: Same as Dataset1 except the Diffuse albedo is changed with Perlin noise
+                </td>
+
+            </tr>
+            <tr>
+                <td style="text-align: left;" ><b>Dataset 3</b></td>
+                <td style="text-align: left;">- Diffrence: from Dataset2 is the material used here is Glossy material, so it is not using the roughness and specular albedo from .exr file. 
+                    <br>
+                    - Output: Stage1 intermediate result is not working.
+                    <br>
+                    - Texture: Glossy material with Perlin noise, with roughness of 0.5. 
+                </td>
+
+            </tr>
+            <tr>
+                <td style="text-align: left;" ><b>Dataset 4</b></td>
+                <td style="text-align: left;">- Diffrence: from Dataset3 is increase in light intensity.
+                    <br>
+                    - Output: Stage1 intermediate result showes it is working.(This is surprising considering Dataset3 didn't work)
+                    <br>
+                    - Texture: Glossy material with Perlin noise, with roughness of 0.5. 
+                </td>
+
+            </tr>
+        </table>
+        <br>
+        <h2>Dataset 1</h2>
+            <table>
+                <tr>
+                <td><a href="#" onclick="expandImage('data/part2/single_doll/0065.png', '0065.png')"><img src="data/part2/single_doll/0065.png" alt="0065.png" width="400"></a></td>
+                <td><a href="#" onclick="expandImage('data/part2/single_doll/0071.png', '0071.png')"><img src="data/part2/single_doll/0071.png" alt="0071.png" width="400"></a></td>
+                <td><a href="#" onclick="expandImage('data/part2/single_doll/0060.png', '0060.png')"><img src="data/part2/single_doll/0060.png" alt="0060.png" width="400"></a></td>
+                <td><a href="#" onclick="expandImage('data/part2/single_doll/0075.png', '0075.png')"><img src="data/part2/single_doll/0075.png" alt="0075.png" width="400"></a></td>
+                </tr>
+                <tr>
+                <td><a href="#" onclick="expandImage('data/part2/single_doll/0004.png', '0004.png')"><img src="data/part2/single_doll/0004.png" alt="0004.png" width="400"></a></td>
+                <td><a href="#" onclick="expandImage('data/part2/single_doll/0017.png', '0017.png')"><img src="data/part2/single_doll/0017.png" alt="0017.png" width="400"></a></td>
+                <td><a href="#" onclick="expandImage('data/part2/single_doll/0025.png', '0025.png')"><img src="data/part2/single_doll/0025.png" alt="0025.png" width="400"></a></td>
+                <td><a href="#" onclick="expandImage('data/part2/single_doll/0035.png', '0035.png')"><img src="data/part2/single_doll/0035.png" alt="0035.png" width="400"></a></td>
+                </tr>
+                <tr>
+                <td><a href="#" onclick="expandImage('data/part2/single_doll/0047.png', '0047.png')"><img src="data/part2/single_doll/0047.png" alt="0047.png" width="400"></a></td>
+                <td><a href="#" onclick="expandImage('data/part2/single_doll/0041.png', '0041.png')"><img src="data/part2/single_doll/0041.png" alt="0041.png" width="400"></a></td>
+                <td><a href="#" onclick="expandImage('data/part2/single_doll/0055.png', '0055.png')"><img src="data/part2/single_doll/0055.png" alt="0055.png" width="400"></a></td>
+                <td><a href="#" onclick="expandImage('data/part2/single_doll/0068.png', '0068.png')"><img src="data/part2/single_doll/0068.png" alt="0068.png" width="400"></a></td>
+                </tr>
+                </table>
+                <table>
+                    <tr>
+                    <td><a href="#" onclick="expandImage('data/part2/single_doll/process/IRON_Texture.png', 'IRON_Texture.png')"><img src="data/part2/single_doll/process/IRON_Texture.png" alt="IRON_Texture.png" width="400"></a></td>
+                    <td><a href="#" onclick="expandImage('data/part2/single_doll/process/Screenshot 2023-04-04 at 5.16.35 PM.png', 'Screenshot 2023-04-04 at 5.16.35 PM.png')"><img src="data/part2/single_doll/process/Screenshot 2023-04-04 at 5.16.35 PM.png" alt="Screenshot 2023-04-04 at 5.16.35 PM.png" width="400"></a></td>
+                    </tr>
+                </table>
+                <h4>IRON Stage1 intermediate output</h4>
+                <table>
+                    <tr>
+                    <td><a href="#" onclick="expandImage('data/part2/single_doll/result/00007750_0_99.png', '00007750_0_99.png')"><img src="data/part2/single_doll/result/00007750_0_99.png" alt="00007750_0_99.png" width="400"></a></td>
+                    <td><a href="#" onclick="expandImage('data/part2/single_doll/result/00007250_0_10.png', '00007250_0_10.png')"><img src="data/part2/single_doll/result/00007250_0_10.png" alt="00007250_0_10.png" width="400"></a></td>
+                    </tr>
+                    </table>
+        
+            <h2>Dataset 2</h2>
+            <table>
+                <tr>
+                <td><a href="#" onclick="expandImage('data/part2/pig_orange_1/0006.png', '0006.png')"><img src="data/part2/pig_orange_1/0006.png" alt="0006.png" width="400"></a></td>
+                <td><a href="#" onclick="expandImage('data/part2/pig_orange_1/0012.png', '0012.png')"><img src="data/part2/pig_orange_1/0012.png" alt="0012.png" width="400"></a></td>
+                <td><a href="#" onclick="expandImage('data/part2/pig_orange_1/0007.png', '0007.png')"><img src="data/part2/pig_orange_1/0007.png" alt="0007.png" width="400"></a></td>
+                <td><a href="#" onclick="expandImage('data/part2/pig_orange_1/0011.png', '0011.png')"><img src="data/part2/pig_orange_1/0011.png" alt="0011.png" width="400"></a></td>
+                </tr>
+                <tr>
+                <td><a href="#" onclick="expandImage('data/part2/pig_orange_1/0005.png', '0005.png')"><img src="data/part2/pig_orange_1/0005.png" alt="0005.png" width="400"></a></td>
+                <td><a href="#" onclick="expandImage('data/part2/pig_orange_1/0004.png', '0004.png')"><img src="data/part2/pig_orange_1/0004.png" alt="0004.png" width="400"></a></td>
+                <td><a href="#" onclick="expandImage('data/part2/pig_orange_1/0010.png', '0010.png')"><img src="data/part2/pig_orange_1/0010.png" alt="0010.png" width="400"></a></td>
+                <td><a href="#" onclick="expandImage('data/part2/pig_orange_1/0001.png', '0001.png')"><img src="data/part2/pig_orange_1/0001.png" alt="0001.png" width="400"></a></td>
+                </tr>
+                <tr>
+                <td><a href="#" onclick="expandImage('data/part2/pig_orange_1/0003.png', '0003.png')"><img src="data/part2/pig_orange_1/0003.png" alt="0003.png" width="400"></a></td>
+                <td><a href="#" onclick="expandImage('data/part2/pig_orange_1/0002.png', '0002.png')"><img src="data/part2/pig_orange_1/0002.png" alt="0002.png" width="400"></a></td>
+                <td><a href="#" onclick="expandImage('data/part2/pig_orange_1/0009.png', '0009.png')"><img src="data/part2/pig_orange_1/0009.png" alt="0009.png" width="400"></a></td>
+                <td><a href="#" onclick="expandImage('data/part2/pig_orange_1/0008.png', '0008.png')"><img src="data/part2/pig_orange_1/0008.png" alt="0008.png" width="400"></a></td>
+                </tr>
+                </table>
+            <h4>IRON Stage1 intermediate output</h4>
+            <table>
+                <tr>
+                <td><a href="#" onclick="expandImage('data/part2/pig_orange_1/result/00009750_0_14.png', '00009750_0_14.png')"><img src="data/part2/pig_orange_1/result/00009750_0_14.png" alt="00009750_0_14.png" width="400"></a></td>
+                <td><a href="#" onclick="expandImage('data/part2/pig_orange_1/result/00005250_0_43.png', '00005250_0_43.png')"><img src="data/part2/pig_orange_1/result/00005250_0_43.png" alt="00005250_0_43.png" width="400"></a></td>
+                </tr>
+            </table>
+                    
+        <h2>Dataset 3</h2>
+        <br>
+        <table>
+            <tr>
+            <td><a href="#" onclick="expandImage('data/part2/pig_orange/0006.png', '0006.png')"><img src="data/part2/pig_orange/0006.png" alt="0006.png" width="400"></a></td>
+            <td><a href="#" onclick="expandImage('data/part2/pig_orange/0012.png', '0012.png')"><img src="data/part2/pig_orange/0012.png" alt="0012.png" width="400"></a></td>
+            <td><a href="#" onclick="expandImage('data/part2/pig_orange/0007.png', '0007.png')"><img src="data/part2/pig_orange/0007.png" alt="0007.png" width="400"></a></td>
+            <td><a href="#" onclick="expandImage('data/part2/pig_orange/0011.png', '0011.png')"><img src="data/part2/pig_orange/0011.png" alt="0011.png" width="400"></a></td>
+            </tr>
+            <tr>
+            <td><a href="#" onclick="expandImage('data/part2/pig_orange/0005.png', '0005.png')"><img src="data/part2/pig_orange/0005.png" alt="0005.png" width="400"></a></td>
+            <td><a href="#" onclick="expandImage('data/part2/pig_orange/0004.png', '0004.png')"><img src="data/part2/pig_orange/0004.png" alt="0004.png" width="400"></a></td>
+            <td><a href="#" onclick="expandImage('data/part2/pig_orange/0010.png', '0010.png')"><img src="data/part2/pig_orange/0010.png" alt="0010.png" width="400"></a></td>
+            <td><a href="#" onclick="expandImage('data/part2/pig_orange/0001.png', '0001.png')"><img src="data/part2/pig_orange/0001.png" alt="0001.png" width="400"></a></td>
+            </tr>
+            <tr>
+            <td><a href="#" onclick="expandImage('data/part2/pig_orange/0003.png', '0003.png')"><img src="data/part2/pig_orange/0003.png" alt="0003.png" width="400"></a></td>
+            <td><a href="#" onclick="expandImage('data/part2/pig_orange/0002.png', '0002.png')"><img src="data/part2/pig_orange/0002.png" alt="0002.png" width="400"></a></td>
+            <td><a href="#" onclick="expandImage('data/part2/pig_orange/0009.png', '0009.png')"><img src="data/part2/pig_orange/0009.png" alt="0009.png" width="400"></a></td>
+            <td><a href="#" onclick="expandImage('data/part2/pig_orange/0008.png', '0008.png')"><img src="data/part2/pig_orange/0008.png" alt="0008.png" width="400"></a></td>
+            </tr>
+        </table>
+        <h4>IRON Stage1 intermediate output</h4>
+        <table>
+            <tr>
+            <td><a href="#" onclick="expandImage('data/part2/pig_orange/result/00004750_0_69.png', '00004750_0_69.png')"><img src="data/part2/pig_orange/result/00004750_0_69.png" alt="00004750_0_69.png" width="400"></a></td>
+            <td><a href="#" onclick="expandImage('data/part2/pig_orange/result/00004250_0_11.png', '00004250_0_11.png')"><img src="data/part2/pig_orange/result/00004250_0_11.png" alt="00004250_0_11.png" width="400"></a></td>
+            </tr>
+        </table>
+        
+        
+        
+        <h2>Dataset 3</h2> 
+        <table>
+            <tr>
+            <td><a href="#" onclick="expandImage('data/part2/pig_orange_2/0006.png', '0006.png')"><img src="data/part2/pig_orange_2/0006.png" alt="0006.png" width="400"></a></td>
+            <td><a href="#" onclick="expandImage('data/part2/pig_orange_2/0012.png', '0012.png')"><img src="data/part2/pig_orange_2/0012.png" alt="0012.png" width="400"></a></td>
+            <td><a href="#" onclick="expandImage('data/part2/pig_orange_2/0007.png', '0007.png')"><img src="data/part2/pig_orange_2/0007.png" alt="0007.png" width="400"></a></td>
+            <td><a href="#" onclick="expandImage('data/part2/pig_orange_2/0011.png', '0011.png')"><img src="data/part2/pig_orange_2/0011.png" alt="0011.png" width="400"></a></td>
+            </tr>
+            <tr>
+            <td><a href="#" onclick="expandImage('data/part2/pig_orange_2/0005.png', '0005.png')"><img src="data/part2/pig_orange_2/0005.png" alt="0005.png" width="400"></a></td>
+            <td><a href="#" onclick="expandImage('data/part2/pig_orange_2/0004.png', '0004.png')"><img src="data/part2/pig_orange_2/0004.png" alt="0004.png" width="400"></a></td>
+            <td><a href="#" onclick="expandImage('data/part2/pig_orange_2/0010.png', '0010.png')"><img src="data/part2/pig_orange_2/0010.png" alt="0010.png" width="400"></a></td>
+            <td><a href="#" onclick="expandImage('data/part2/pig_orange_2/0001.png', '0001.png')"><img src="data/part2/pig_orange_2/0001.png" alt="0001.png" width="400"></a></td>
+            </tr>
+            <tr>
+            <td><a href="#" onclick="expandImage('data/part2/pig_orange_2/0003.png', '0003.png')"><img src="data/part2/pig_orange_2/0003.png" alt="0003.png" width="400"></a></td>
+            <td><a href="#" onclick="expandImage('data/part2/pig_orange_2/0002.png', '0002.png')"><img src="data/part2/pig_orange_2/0002.png" alt="0002.png" width="400"></a></td>
+            <td><a href="#" onclick="expandImage('data/part2/pig_orange_2/0009.png', '0009.png')"><img src="data/part2/pig_orange_2/0009.png" alt="0009.png" width="400"></a></td>
+            <td><a href="#" onclick="expandImage('data/part2/pig_orange_2/0008.png', '0008.png')"><img src="data/part2/pig_orange_2/0008.png" alt="0008.png" width="400"></a></td>
+            </tr>
+            </table>
+
+            <table>
+                <tr>
+                <td><a href="#" onclick="expandImage('data/part2/pig_orange_2/result/00004000_0_76.png', '00004000_0_76.png')"><img src="data/part2/pig_orange_2/result/00004000_0_76.png" alt="00004000_0_76.png" width="400"></a></td>
+                <td><a href="#" onclick="expandImage('data/part2/pig_orange_2/result/00002750_0_86.png', '00002750_0_86.png')"><img src="data/part2/pig_orange_2/result/00002750_0_86.png" alt="00002750_0_86.png" width="400"></a></td>
+                </tr>
+            </table>
+            <h2>Dataset 4</h2> 
+            <table>
+                <tr>
+                <td><a href="#" onclick="expandImage('data/part2/one_doll_blue_pig/0006.png', '0006.png')"><img src="data/part2/one_doll_blue_pig/0006.png" alt="0006.png" width="400"></a></td>
+                <td><a href="#" onclick="expandImage('data/part2/one_doll_blue_pig/0012.png', '0012.png')"><img src="data/part2/one_doll_blue_pig/0012.png" alt="0012.png" width="400"></a></td>
+                <td><a href="#" onclick="expandImage('data/part2/one_doll_blue_pig/0007.png', '0007.png')"><img src="data/part2/one_doll_blue_pig/0007.png" alt="0007.png" width="400"></a></td>
+                <td><a href="#" onclick="expandImage('data/part2/one_doll_blue_pig/0011.png', '0011.png')"><img src="data/part2/one_doll_blue_pig/0011.png" alt="0011.png" width="400"></a></td>
+                </tr>
+                <tr>
+                <td><a href="#" onclick="expandImage('data/part2/one_doll_blue_pig/0005.png', '0005.png')"><img src="data/part2/one_doll_blue_pig/0005.png" alt="0005.png" width="400"></a></td>
+                <td><a href="#" onclick="expandImage('data/part2/one_doll_blue_pig/0004.png', '0004.png')"><img src="data/part2/one_doll_blue_pig/0004.png" alt="0004.png" width="400"></a></td>
+                <td><a href="#" onclick="expandImage('data/part2/one_doll_blue_pig/0010.png', '0010.png')"><img src="data/part2/one_doll_blue_pig/0010.png" alt="0010.png" width="400"></a></td>
+                <td><a href="#" onclick="expandImage('data/part2/one_doll_blue_pig/0001.png', '0001.png')"><img src="data/part2/one_doll_blue_pig/0001.png" alt="0001.png" width="400"></a></td>
+                </tr>
+                <tr>
+                <td><a href="#" onclick="expandImage('data/part2/one_doll_blue_pig/0003.png', '0003.png')"><img src="data/part2/one_doll_blue_pig/0003.png" alt="0003.png" width="400"></a></td>
+                <td><a href="#" onclick="expandImage('data/part2/one_doll_blue_pig/0002.png', '0002.png')"><img src="data/part2/one_doll_blue_pig/0002.png" alt="0002.png" width="400"></a></td>
+                <td><a href="#" onclick="expandImage('data/part2/one_doll_blue_pig/0009.png', '0009.png')"><img src="data/part2/one_doll_blue_pig/0009.png" alt="0009.png" width="400"></a></td>
+                <td><a href="#" onclick="expandImage('data/part2/one_doll_blue_pig/0008.png', '0008.png')"><img src="data/part2/one_doll_blue_pig/0008.png" alt="0008.png" width="400"></a></td>
+                </tr>
+                </table>
+            <script>
+                function expandImage(imgSrc, imgAlt) {
+                var overlay = document.createElement("div");
+                overlay.style.position = "fixed";
+                overlay.style.top = "0";
+                overlay.style.left = "0";
+                overlay.style.width = "100%";
+                overlay.style.height = "100%";
+                overlay.style.backgroundColor = "rgba(0,0,0,0.7)";
+                overlay.style.display = "flex";
+                overlay.style.justifyContent = "center";
+                overlay.style.alignItems = "center";
+                overlay.onclick = function() {overlay.parentNode.removeChild(overlay);};
+                var img = document.createElement("img");
+                img.src = imgSrc;
+                img.alt = imgAlt;
+                img.style.maxWidth = "90%";
+                img.style.maxHeight = "90%";
+                img.onclick = function(e) {e.stopPropagation();};
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+                }
+                </script>
+    </body>
+</html>
