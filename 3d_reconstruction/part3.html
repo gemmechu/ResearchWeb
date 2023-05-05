@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body style="text-align: -webkit-center">
+        <div style="text-align: -webkit-left;">
+			<ul>
+
+                <li class="nav"><a href="index.html">Part 1</a></li>
+                <li class="nav"><a href="part2.html">Part 2</a></li>
+                <li class="nav"><a href="part3.html" style="background-color: #27cece;">Part 3</a></li>
+            </ul>
+		</div>
+        <h2 >Experiment with Different camera Normalization</h2>
+    
+        
+        <br>
+        <h2>Dataset: Superman</h2>
+        <table>
+        <tr>
+        <td><a href="#" onclick="expandImage('/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/images/IMG_3008.png', 'IMG_3008.png')"><img src="/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/images/IMG_3008.png" alt="IMG_3008.png" width="400"></a></td>
+        <td><a href="#" onclick="expandImage('/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/images/IMG_3013.png', 'IMG_3013.png')"><img src="/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/images/IMG_3013.png" alt="IMG_3013.png" width="400"></a></td>
+        <td><a href="#" onclick="expandImage('/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/images/IMG_3007.png', 'IMG_3007.png')"><img src="/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/images/IMG_3007.png" alt="IMG_3007.png" width="400"></a></td>
+        <td><a href="#" onclick="expandImage('/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/images/IMG_3006.png', 'IMG_3006.png')"><img src="/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/images/IMG_3006.png" alt="IMG_3006.png" width="400"></a></td>
+        </tr>
+        <tr>
+        <td><a href="#" onclick="expandImage('/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/images/IMG_3012.png', 'IMG_3012.png')"><img src="/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/images/IMG_3012.png" alt="IMG_3012.png" width="400"></a></td>
+        <td><a href="#" onclick="expandImage('/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/images/IMG_3004.png', 'IMG_3004.png')"><img src="/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/images/IMG_3004.png" alt="IMG_3004.png" width="400"></a></td>
+        <td><a href="#" onclick="expandImage('/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/images/IMG_3010.png', 'IMG_3010.png')"><img src="/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/images/IMG_3010.png" alt="IMG_3010.png" width="400"></a></td>
+        <td><a href="#" onclick="expandImage('/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/images/IMG_3005.png', 'IMG_3005.png')"><img src="/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/images/IMG_3005.png" alt="IMG_3005.png" width="400"></a></td>
+        </tr>
+        <tr>
+        <td><a href="#" onclick="expandImage('/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/images/IMG_3015.png', 'IMG_3015.png')"><img src="/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/images/IMG_3015.png" alt="IMG_3015.png" width="400"></a></td>
+        <td><a href="#" onclick="expandImage('/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/images/IMG_3014.png', 'IMG_3014.png')"><img src="/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/images/IMG_3014.png" alt="IMG_3014.png" width="400"></a></td>
+        <td><a href="#" onclick="expandImage('/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/images/IMG_3002.png', 'IMG_3002.png')"><img src="/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/images/IMG_3002.png" alt="IMG_3002.png" width="400"></a></td>
+        <td><a href="#" onclick="expandImage('/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/images/IMG_3003.png', 'IMG_3003.png')"><img src="/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/images/IMG_3003.png" alt="IMG_3003.png" width="400"></a></td>
+        </tr>
+        </table>
+        
+        <br>
+        <h2>Experiment</h2>
+        <table>
+            <tr>
+                <th>Alpha</th>
+                <th>Camera pose</th>
+                <th>1st stage ouput</th>
+                <th>1st stage Intermediate Mesh </th>
+                <th>Final Mesh+texture</td>
+            </tr>
+            <tr>
+                <td><h2>alpha = 4</h2></td>
+                <td><a href="#" onclick="expandImage('/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/custom/4x/Screenshot 2023-05-05 at 2.37.45 PM.png', 'Screenshot 2023-05-05 at 2.37.45 PM')"><img src="/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/custom/4x/Screenshot 2023-05-05 at 2.37.45 PM.png" alt="Screenshot 2023-05-05 at 2.37.45 PM" width="700"></a></td>
+                <td><a href="#" onclick="expandImage('/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/custom/4x/superman_4x_00009250_0_134.png', 'superman_4x_00009250_0_134')"><img src="/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/custom/4x/superman_4x_00009250_0_134.png" alt="superman_4x_00009250_0_134" width="400"></a></td>
+                <td>No output</td>
+                <td>No output</td>
+            
+            </tr>
+            <tr>
+                <td ><h2>alpha = 2</h2></td>
+                <td><a href="#" onclick="expandImage('/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/custom/2x/Screenshot 2023-05-05 at 2.37.13 PM.png', 'Screenshot 2023-05-05 at 2.37.13 PM')"><img src="/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/custom/2x/Screenshot 2023-05-05 at 2.37.13 PM.png" alt="Screenshot 2023-05-05 at 2.37.13 PM" width="700"></a></td>
+            <td><a href="#" onclick="expandImage('/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/custom/2x/superman2x_00010000_0_135.png', 'superman2x_00010000_0_135')"><img src="/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/custom/2x/superman2x_00010000_0_135.png" alt="superman2x_00010000_0_135" width="400"></a></td>
+            <td><a href="#" onclick="expandImage('/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/custom/2x/superman2x.png', 'superman2x')"><img src="/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/custom/2x/superman2x.png" alt="superman2x" width="400"></a></td>
+            <td><a href="#" onclick="expandImage('/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/custom/2x/2x.png', 'superman2x')"><img src="/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/custom/2x/2x.png" alt="superman2x" width="400"></a></td>
+            
+            </tr>
+            <tr>
+                <td><h2>alpha = 1</h2></td>
+                <td><a href="#" onclick="expandImage('/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/custom/1x/Screenshot 2023-05-05 at 2.38.06 PM.png', 'Screenshot 2023-05-05 at 2.38.06 PM')"><img src="/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/custom/1x/Screenshot 2023-05-05 at 2.38.06 PM.png" alt="Screenshot 2023-05-05 at 2.38.06 PM" width="700"></a></td>
+                <td><a href="#" onclick="expandImage('/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/custom/1x/00010000_0_179.png', '00010000_0_179')"><img src="/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/custom/1x/00010000_0_179.png" alt="00010000_0_179" width="400"></a></td>
+                <td><a href="#" onclick="expandImage('/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/custom/1x/Screenshot 2023-05-05 at 3.12.12 PM.png', 'Screenshot 2023-05-05 at 3.12.12 PM')"><img src="/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/custom/1x/Screenshot 2023-05-05 at 3.12.12 PM.png" alt="Screenshot 2023-05-05 at 3.12.12 PM" width="400"></a></td>
+                <td>No output</td>
+                </tr>
+           
+
+            <tr>
+                <td ><h2>alpha = 0.5</h2></td>
+            
+            <td><a href="#" onclick="expandImage('/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/custom/0_5x/Screenshot 2023-05-05 at 2.38.29 PM.png', 'Screenshot 2023-05-05 at 2.38.29 PM')"><img src="/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/custom/0_5x/Screenshot 2023-05-05 at 2.38.29 PM.png" alt="Screenshot 2023-05-05 at 2.38.29 PM" width="700"></a></td>
+            <td><a href="#" onclick="expandImage('/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/custom/0_5x/superman_0_5x_00010000_0_179.png', 'superman_0_5x_00010000_0_179')"><img src="/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/custom/0_5x/superman_0_5x_00010000_0_179.png" alt="superman_0_5x_00010000_0_179" width="400"></a></td>
+            <td><a href="#" onclick="expandImage('/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/custom/0_5x/superman_0_5x.png', 'superman_0_5x')"><img src="/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/custom/0_5x/superman_0_5x.png" alt="superman_0_5x" width="400"></a></td>    
+            <td><a href="#" onclick="expandImage('/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/custom/0_5x/0_5x.png', 'superman2x')"><img src="/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/custom/0_5x/0_5x.png" alt="superman2x" width="400"></a></td>
+        </tr>
+        <tr>
+            <td><h2>alpha = 1 and Scale = 1</h2></td>
+        
+            <td><a href="#" onclick="expandImage('/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/custom/1_1x/Screenshot 2023-05-05 at 2.39.12 PM.png', 'Screenshot 2023-05-05 at 2.39.12 PM')"><img src="/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/custom/1_1x/Screenshot 2023-05-05 at 2.39.12 PM.png" alt="Screenshot 2023-05-05 at 2.39.12 PM" width="700"></a></td>
+            <td><a href="#" onclick="expandImage('/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/custom/1_1x/superman_1_1x_00009500_0_132.png', 'superman_1_1x_00009500_0_132')"><img src="/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/custom/1_1x/superman_1_1x_00009500_0_132.png" alt="superman_1_1x_00009500_0_132" width="400"></a></td>
+        
+        <td><a href="#" onclick="expandImage('/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/custom/1_1x/superman_1_1x.png', 'superman_1_1x')"><img src="/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/custom/1_1x/superman_1_1x.png" alt="superman_1_1x" width="400"></a></td>    
+        <td><a href="#" onclick="expandImage('/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/custom/1_1x/1_1x.png', 'superman2x')"><img src="/Users/gemmechu/Documents/Research/ResearchWeb/3d_reconstruction/data/Part3/custom/1_1x/1_1x.png" alt="superman2x" width="400"></a></td>
+    </tr>
+            
+            
+        
+            
+            </table>
+            
+            
+
+            
+        
+            
+            <script>
+                function expandImage(imgSrc, imgAlt) {
+                var overlay = document.createElement("div");
+                overlay.style.position = "fixed";
+                overlay.style.top = "0";
+                overlay.style.left = "0";
+                overlay.style.width = "100%";
+                overlay.style.height = "100%";
+                overlay.style.backgroundColor = "rgba(0,0,0,0.7)";
+                overlay.style.display = "flex";
+                overlay.style.justifyContent = "center";
+                overlay.style.alignItems = "center";
+                overlay.onclick = function() {overlay.parentNode.removeChild(overlay);};
+                var img = document.createElement("img");
+                img.src = imgSrc;
+                img.alt = imgAlt;
+                img.style.maxWidth = "90%";
+                img.style.maxHeight = "90%";
+                img.onclick = function(e) {e.stopPropagation();};
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+                }
+                </script>
+    </body>
+</html>
