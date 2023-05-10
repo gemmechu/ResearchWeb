@@ -9,6 +9,7 @@
                 <li class="nav"><a href="index.html">Part 1</a></li>
                 <li class="nav"><a href="part2.html">Part 2</a></li>
                 <li class="nav"><a href="part3.html" style="background-color: #27cece;">Part 3</a></li>
+                <li class="nav"><a href="part4.html">Part 4</a></li>
             </ul>
 		</div>
         <h2 >Experiment with Different camera Normalization</h2>
@@ -78,14 +79,25 @@
             
             </tr>
             <tr>
+                <td><h2>Original</h2></td>
+                
+                <td><a href="#" onclick="expandImage('data/Part3/custom/original/superman_iron_original_3.png', 'superman_iron_original_3')"><img src="data/Part3/custom/original/superman_iron_original_3.png" alt="superman_iron_original_3" width="500"></a></td>
+                <td><a href="#" onclick="expandImage('data/Part3/custom/original/00010000_0_64_original.png', '00010000_0_64_original')"><img src="data/Part3/custom/original/00010000_0_64_original.png" alt="00010000_0_64_original" width="400"></a></td>
+                <td><a href="#" onclick="expandImage('data/Part3/custom/original/superman_iron_original_2.png', 'superman_iron_original_2')"><img src="data/Part3/custom/original/superman_iron_original_2.png" alt="superman_iron_original_2" width="400"></a></td>
+                <td><a href="#" onclick="expandImage('data/Part3/custom/original/superman_iron_original.png', 'superman_iron_original')"><img src="data/Part3/custom/original/superman_iron_original.png" alt="superman_iron_original" width="400"></a></td>
+                
+                
+            </tr>
+            <tr>
                 <td><h2>alpha = 1</h2></td>
                 <td><a href="#" onclick="expandImage('data/Part3/custom/1x/Screenshot 2023-05-05 at 2.38.06 PM.png', 'Screenshot 2023-05-05 at 2.38.06 PM')"><img src="data/Part3/custom/1x/Screenshot 2023-05-05 at 2.38.06 PM.png" alt="Screenshot 2023-05-05 at 2.38.06 PM" width="700"></a></td>
                 <td><a href="#" onclick="expandImage('data/Part3/custom/1x/00010000_0_179.png', '00010000_0_179')"><img src="data/Part3/custom/1x/00010000_0_179.png" alt="00010000_0_179" width="400"></a></td>
                 <td><a href="#" onclick="expandImage('data/Part3/custom/1x/Screenshot 2023-05-05 at 3.12.12 PM.png', 'Screenshot 2023-05-05 at 3.12.12 PM')"><img src="data/Part3/custom/1x/Screenshot 2023-05-05 at 3.12.12 PM.png" alt="Screenshot 2023-05-05 at 3.12.12 PM" width="400"></a></td>
                 <td>No output</td>
                 </tr>
-    
+     
             <tr>
+
                 <td ><h2>alpha = 0.5</h2></td>
             
             <td><a href="#" onclick="expandImage('data/Part3/custom/0_5x/Screenshot 2023-05-05 at 2.38.29 PM.png', 'Screenshot 2023-05-05 at 2.38.29 PM')"><img src="data/Part3/custom/0_5x/Screenshot 2023-05-05 at 2.38.29 PM.png" alt="Screenshot 2023-05-05 at 2.38.29 PM" width="700"></a></td>
@@ -114,27 +126,81 @@
         
             
             <script>
+                // Create an array to hold the image file paths
+                var images = [
+                  'data/Part3/cameras/Original.png',
+                  'data/Part3/cameras/Screenshot 2023-05-05 at 2.38.29 PM.png',
+                  'data/Part3/cameras/Screenshot 2023-05-05 at 2.37.45 PM.png',
+                  'data/Part3/cameras/Screenshot 2023-05-05 at 2.39.12 PM.png',
+                  'data/Part3/cameras/Screenshot 2023-05-05 at 2.38.06 PM.png',
+                  'data/Part3/cameras/Screenshot 2023-05-05 at 2.37.13 PM.png'
+                ];
+              
+                // Set an initial index for the current image
+                var currentImageIndex = 0;
+              
                 function expandImage(imgSrc, imgAlt) {
-                var overlay = document.createElement("div");
-                overlay.style.position = "fixed";
-                overlay.style.top = "0";
-                overlay.style.left = "0";
-                overlay.style.width = "100%";
-                overlay.style.height = "100%";
-                overlay.style.backgroundColor = "rgba(0,0,0,0.7)";
-                overlay.style.display = "flex";
-                overlay.style.justifyContent = "center";
-                overlay.style.alignItems = "center";
-                overlay.onclick = function() {overlay.parentNode.removeChild(overlay);};
-                var img = document.createElement("img");
-                img.src = imgSrc;
-                img.alt = imgAlt;
-                img.style.maxWidth = "90%";
-                img.style.maxHeight = "90%";
-                img.onclick = function(e) {e.stopPropagation();};
-                overlay.appendChild(img);
-                document.body.appendChild(overlay);
+                  var overlay = document.createElement('div');
+                  overlay.style.position = 'fixed';
+                  overlay.style.top = '0';
+                  overlay.style.left = '0';
+                  overlay.style.width = '100%';
+                  overlay.style.height = '100%';
+                  overlay.style.backgroundColor = 'rgba(0,0,0,0.7)';
+                  overlay.style.display = 'flex';
+                  overlay.style.justifyContent = 'center';
+                  overlay.style.alignItems = 'center';
+                  overlay.onclick = function() {
+                    overlay.parentNode.removeChild(overlay);
+                  };
+              
+                  var img = document.createElement('img');
+                  img.src = imgSrc;
+                  img.alt = imgAlt;
+                  img.style.maxWidth = '90%';
+                  img.style.maxHeight = '90%';
+                  img.onclick = function(e) {
+                    e.stopPropagation();
+                  };
+                  
+                  // Create a previous button
+                  var previousBtn = document.createElement("button");
+                previousBtn.innerHTML = "&#8249;";
+                previousBtn.style.marginRight = "60px";
+                previousBtn.style.fontSize = "100px";
+                previousBtn.style.color = "#fff";
+                previousBtn.style.backgroundColor = "transparent";
+                previousBtn.style.border = "none";
+                previousBtn.style.cursor = "pointer";
+                  previousBtn.onclick = function(e) {
+                    e.stopPropagation();
+                    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+                    img.src = images[currentImageIndex];
+                  };
+                  
+                  // Create a next button
+                  var nextBtn = document.createElement('button');
+                  nextBtn.innerHTML = "&#8250;";
+                    nextBtn.style.marginLeft = "60px";
+                    nextBtn.style.fontSize = "100px";
+                    nextBtn.style.color = "#fff";
+                    nextBtn.style.backgroundColor = "transparent";
+                    nextBtn.style.border = "none";
+                    nextBtn.style.cursor = "pointer";
+                  nextBtn.onclick = function(e) {
+                    e.stopPropagation();
+                    currentImageIndex = (currentImageIndex + 1) % images.length;
+                    img.src = images[currentImageIndex];
+                  };
+
+                  overlay.appendChild(previousBtn);
+                  overlay.appendChild(img);
+                  overlay.appendChild(nextBtn);
+              
+                  document.body.appendChild(overlay);
                 }
-                </script>
+              </script>
+              
+                
     </body>
 </html>

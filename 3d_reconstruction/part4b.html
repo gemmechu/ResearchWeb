@@ -1,0 +1,131 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body style="text-align: -webkit-center">
+        <div style="text-align: -webkit-left;">
+			<ul>
+
+                <li class="nav"><a href="index.html">Part 1</a></li>
+                <li class="nav"><a href="part2.html">Part 2</a></li>
+                <li class="nav"><a href="part3.html">Part 3</a></li>
+                <li class="nav"><a href="part4.html" style="background-color: #27cece;">Part 4</a></li>
+            </ul>
+		</div>
+    <h2 >IRON Experiment with synthetic data</h2>
+    <div>
+        <ul>
+            <li class="nav"><a href="part4.html">Two Cars</a></li>
+            <li class="nav"><a href="part4b.html" style="background-color: #33de58;">Two dolls</a></li>
+            <li class="nav"><a href="part4c.html">Multi dolls</a></li>
+        </ul>
+</div>
+<h2>Dataset 3</h2>
+<table>
+    <tr>
+    <td><a href="#" onclick="expandImage('data/part2/two_dolls_orange_pink/0006.png', '0006.png')"><img src="data/part2/two_dolls_orange_pink/0006.png" alt="0006.png" width="400"></a></td>
+    <td><a href="#" onclick="expandImage('data/part2/two_dolls_orange_pink/0012.png', '0012.png')"><img src="data/part2/two_dolls_orange_pink/0012.png" alt="0012.png" width="400"></a></td>
+    <td><a href="#" onclick="expandImage('data/part2/two_dolls_orange_pink/0007.png', '0007.png')"><img src="data/part2/two_dolls_orange_pink/0007.png" alt="0007.png" width="400"></a></td>
+    <td><a href="#" onclick="expandImage('data/part2/two_dolls_orange_pink/0011.png', '0011.png')"><img src="data/part2/two_dolls_orange_pink/0011.png" alt="0011.png" width="400"></a></td>
+    </tr>
+    <tr>
+    <td><a href="#" onclick="expandImage('data/part2/two_dolls_orange_pink/0005.png', '0005.png')"><img src="data/part2/two_dolls_orange_pink/0005.png" alt="0005.png" width="400"></a></td>
+    <td><a href="#" onclick="expandImage('data/part2/two_dolls_orange_pink/0004.png', '0004.png')"><img src="data/part2/two_dolls_orange_pink/0004.png" alt="0004.png" width="400"></a></td>
+    <td><a href="#" onclick="expandImage('data/part2/two_dolls_orange_pink/0010.png', '0010.png')"><img src="data/part2/two_dolls_orange_pink/0010.png" alt="0010.png" width="400"></a></td>
+    <td><a href="#" onclick="expandImage('data/part2/two_dolls_orange_pink/0001.png', '0001.png')"><img src="data/part2/two_dolls_orange_pink/0001.png" alt="0001.png" width="400"></a></td>
+    </tr>
+    <tr>
+    <td><a href="#" onclick="expandImage('data/part2/two_dolls_orange_pink/0003.png', '0003.png')"><img src="data/part2/two_dolls_orange_pink/0003.png" alt="0003.png" width="400"></a></td>
+    <td><a href="#" onclick="expandImage('data/part2/two_dolls_orange_pink/0002.png', '0002.png')"><img src="data/part2/two_dolls_orange_pink/0002.png" alt="0002.png" width="400"></a></td>
+    <td><a href="#" onclick="expandImage('data/part2/two_dolls_orange_pink/0009.png', '0009.png')"><img src="data/part2/two_dolls_orange_pink/0009.png" alt="0009.png" width="400"></a></td>
+    <td><a href="#" onclick="expandImage('data/part2/two_dolls_orange_pink/0008.png', '0008.png')"><img src="data/part2/two_dolls_orange_pink/0008.png" alt="0008.png" width="400"></a></td>
+    </tr>
+    </table>
+    
+    <h4>IRON Stage1 intermediate output</h4>
+    <table>
+    <tr>
+    <td><a href="#" onclick="expandImage('data/part2/two_dolls_orange_pink/result/00010000_0_47.png', '00010000_0_47.png')"><img src="data/part2/two_dolls_orange_pink/result/00010000_0_47.png" alt="00010000_0_47.png" width="400"></a></td>
+    <td><a href="#" onclick="expandImage('data/part2/two_dolls_orange_pink/result/00009500_0_27.png', '00009500_0_27.png')"><img src="data/part2/two_dolls_orange_pink/result/00009500_0_27.png" alt="00009500_0_27.png" width="400"></a></td>
+    </tr>
+    </table>
+            
+            <script>
+                // Create an array to hold the image file paths
+                var images = [
+                  'data/Part3/cameras/Original.png',
+                  'data/Part3/cameras/Screenshot 2023-05-05 at 2.38.29 PM.png',
+                  'data/Part3/cameras/Screenshot 2023-05-05 at 2.37.45 PM.png',
+                  'data/Part3/cameras/Screenshot 2023-05-05 at 2.39.12 PM.png',
+                  'data/Part3/cameras/Screenshot 2023-05-05 at 2.38.06 PM.png',
+                  'data/Part3/cameras/Screenshot 2023-05-05 at 2.37.13 PM.png'
+                ];
+              
+                // Set an initial index for the current image
+                var currentImageIndex = 0;
+              
+                function expandImage(imgSrc, imgAlt) {
+                  var overlay = document.createElement('div');
+                  overlay.style.position = 'fixed';
+                  overlay.style.top = '0';
+                  overlay.style.left = '0';
+                  overlay.style.width = '100%';
+                  overlay.style.height = '100%';
+                  overlay.style.backgroundColor = 'rgba(0,0,0,0.7)';
+                  overlay.style.display = 'flex';
+                  overlay.style.justifyContent = 'center';
+                  overlay.style.alignItems = 'center';
+                  overlay.onclick = function() {
+                    overlay.parentNode.removeChild(overlay);
+                  };
+              
+                  var img = document.createElement('img');
+                  img.src = imgSrc;
+                  img.alt = imgAlt;
+                  img.style.maxWidth = '90%';
+                  img.style.maxHeight = '90%';
+                  img.onclick = function(e) {
+                    e.stopPropagation();
+                  };
+                  
+                  // Create a previous button
+                  var previousBtn = document.createElement("button");
+                previousBtn.innerHTML = "&#8249;";
+                previousBtn.style.marginRight = "60px";
+                previousBtn.style.fontSize = "100px";
+                previousBtn.style.color = "#fff";
+                previousBtn.style.backgroundColor = "transparent";
+                previousBtn.style.border = "none";
+                previousBtn.style.cursor = "pointer";
+                  previousBtn.onclick = function(e) {
+                    e.stopPropagation();
+                    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+                    img.src = images[currentImageIndex];
+                  };
+                  
+                  // Create a next button
+                  var nextBtn = document.createElement('button');
+                  nextBtn.innerHTML = "&#8250;";
+                    nextBtn.style.marginLeft = "60px";
+                    nextBtn.style.fontSize = "100px";
+                    nextBtn.style.color = "#fff";
+                    nextBtn.style.backgroundColor = "transparent";
+                    nextBtn.style.border = "none";
+                    nextBtn.style.cursor = "pointer";
+                  nextBtn.onclick = function(e) {
+                    e.stopPropagation();
+                    currentImageIndex = (currentImageIndex + 1) % images.length;
+                    img.src = images[currentImageIndex];
+                  };
+
+                  overlay.appendChild(previousBtn);
+                  overlay.appendChild(img);
+                  overlay.appendChild(nextBtn);
+              
+                  document.body.appendChild(overlay);
+                }
+              </script>
+              
+                
+    </body>
+</html>
