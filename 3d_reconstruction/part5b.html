@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body style="text-align: -webkit-center">
+        <div style="text-align: -webkit-left;">
+			<ul>
+
+                <li class="nav"><a href="index.html">Part 1</a></li>
+                <li class="nav"><a href="part2.html" >Part 5</a></li>
+                <li class="nav"><a href="part3.html">Part 3</a></li>
+                <li class="nav"><a href="part4.html">Part 4</a></li>
+                <li class="nav"><a href="part5.html" style="background-color: #27cece;">Part 5</a></li>
+            </ul>
+		</div>
+        <h2 >Debugging</h2>
+        <div>
+			<ul>
+                <li class="nav"><a href="part5.html" >Mitsuba v3.3.0 vs v0.5.0</a></li>
+               <li class="nav"> <a href="part5b.html" style="background-color: #33de58;">Replicating IRON results</a></li>
+          
+            </ul>
+		</div>
+        <h2>Using: EXR</h2>
+        <table>
+          <tr>
+            <td><a href="#" onclick="expandImage('data/part5/replicate_iron/exr/1st_stage_iter_100000.png')"><img src="data/part5/replicate_iron/exr/1st_stage_iter_100000.png"  width="400"></a><p>1st_stage_iter_100000.png</p></td>  
+          <td><a href="#" onclick="expandImage('data/part5/replicate_iron/exr/final_output.png')"><img src="data/part5/replicate_iron/exr/final_output.png"  width="400"></a><p>final_output.png</p></td>
+          <td><a href="#" onclick="expandImage('data/part5/replicate_iron/exr/final_output_linear.png')"><img src="data/part5/replicate_iron/exr/final_output_linear.png"  width="400"></a><p>final_output_linear.png</p></td>
+          <td><a href="#" onclick="expandImage('data/part5/replicate_iron/exr/final_output_gamma_manual.png')"><img src="data/part5/replicate_iron/exr/final_output_gamma_manual.png"  width="400"></a><p>final_output_gamma_manual.png</p></td>
+          <td><a href="#" onclick="expandImage('data/part5/replicate_iron/exr/26_mistuba_3_exr.png')"><img src="data/part5/replicate_iron/exr/26_mistuba_3_exr.png"  width="400"></a><p>26_mistuba_3_exr.png</p></td>
+          
+     
+          </tr>
+          </table>
+          <br>
+          <h2>Using: PNG</h2>
+          <table>
+            <tr>
+              <td><a href="#" onclick="expandImage('data/part5/replicate_iron/png/1st_stage_iter_100000.png')"><img src="data/part5/replicate_iron/png/1st_stage_iter_100000.png"  width="400"></a><p>1st_stage_iter_100000.png</p></td>
+            <td><a href="#" onclick="expandImage('data/part5/replicate_iron/png/final_output.png')"><img src="data/part5/replicate_iron/png/final_output.png"  width="400"></a><p>final_output.png</p></td>
+            <td><a href="#" onclick="expandImage('data/part5/replicate_iron/png/final_output_textured.png')"><img src="data/part5/replicate_iron/png/final_output_textured.png"  width="400"></a><p>final_output_textured.png</p></td>
+            <td><a href="#" onclick="expandImage('data/part5/replicate_iron/png/26.png')"><img src="data/part5/replicate_iron/png/26.png"  width="400"></a><p>26.png</p></td>
+            </tr>
+            </table>
+            <br>
+          <h2>Camera</h2>
+          <table>
+            <tr>
+            <td><a href="#" onclick="expandImage('data/part5/replicate_iron/camera/synthetic_data_camera_c.png')"><img src="data/part5/replicate_iron/camera/synthetic_data_camera_c.png"  width="400"></a><p>synthetic_data_camera_c.png</p></td>
+            <td><a href="#" onclick="expandImage('data/part5/replicate_iron/camera/synthetic_data_camera_b.png')"><img src="data/part5/replicate_iron/camera/synthetic_data_camera_b.png"  width="400"></a><p>synthetic_data_camera_b.png</p></td>
+            <td><a href="#" onclick="expandImage('data/part5/replicate_iron/camera/synthetic_data_camera_a.png')"><img src="data/part5/replicate_iron/camera/synthetic_data_camera_a.png"  width="400"></a><p>synthetic_data_camera_a.png</p></td>
+            </tr>
+          </table>
+              <br>
+          
+            <script>
+                // Create an array to hold the image file paths
+                var images = ['data/part5/mitsuba_version_test/diffuse/0_diffuse_mitsuba_3_spectrum_20.png', 'data/part5/mitsuba_version_test/diffuse/0_diffuse_texture_mitsuba_3_rgb_20.png', 'data/part5/mitsuba_version_test/diffuse/0_diffuse_texture_mitsuba_3_spectrum_20.png', 'data/part5/mitsuba_version_test/diffuse/0_diffuse_mitsuba_0_5_rgb_20.png', 'data/part5/mitsuba_version_test/diffuse/0_diffuse_mitsuba_3_rgb_20.png', 'data/part5/mitsuba_version_test/diffuse/0_diffuse_mitsuba_0_5_rgb_20_0_0.png', 'data/part5/mitsuba_version_test/diffuse/0_diffuse_mitsuba_0_5_spectrum.png', 'data/part5/mitsuba_version_test/roughplastic/0_roughplastic_mitsuba_3_spectrum_nonlinearF_20.png', 'data/part5/mitsuba_version_test/roughplastic/0_roughplastic_mitsuba_0_5_spectrum_20_alpha_25.png', 'data/part5/mitsuba_version_test/roughplastic/0_roughplastic_mitsuba_0_5_spectrum_20_alpha_1.png', 'data/part5/mitsuba_version_test/roughplastic/0_roughplastic_mitsuba_3_rgb_nonlinear_20.png', 'data/part5/mitsuba_version_test/roughplastic/_roughplastic_mitsuba_3_rgb_20.png']
+              
+                // Set an initial index for the current image
+                var currentImageIndex = 0;
+              
+                function expandImage(imgSrc, imgAlt) {
+                  var overlay = document.createElement('div');
+                  overlay.style.position = 'fixed';
+                  overlay.style.top = '0';
+                  overlay.style.left = '0';
+                  overlay.style.width = '100%';
+                  overlay.style.height = '100%';
+                  overlay.style.backgroundColor = 'rgba(0,0,0,0.7)';
+                  overlay.style.display = 'flex';
+                  overlay.style.justifyContent = 'center';
+                  overlay.style.alignItems = 'center';
+                  overlay.onclick = function() {
+                    overlay.parentNode.removeChild(overlay);
+                  };
+              
+                  var img = document.createElement('img');
+                  img.src = imgSrc;
+                  img.alt = imgAlt;
+                  img.style.maxWidth = '90%';
+                  img.style.maxHeight = '90%';
+                  img.onclick = function(e) {
+                    e.stopPropagation();
+                  };
+                  
+                  // Create a previous button
+                  var previousBtn = document.createElement("button");
+                previousBtn.innerHTML = "&#8249;";
+                previousBtn.style.marginRight = "60px";
+                previousBtn.style.fontSize = "100px";
+                previousBtn.style.color = "#fff";
+                previousBtn.style.backgroundColor = "transparent";
+                previousBtn.style.border = "none";
+                previousBtn.style.cursor = "pointer";
+                  previousBtn.onclick = function(e) {
+                    e.stopPropagation();
+                    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+                    img.src = images[currentImageIndex];
+                  };
+                  
+                  // Create a next button
+                  var nextBtn = document.createElement('button');
+                  nextBtn.innerHTML = "&#8250;";
+                    nextBtn.style.marginLeft = "60px";
+                    nextBtn.style.fontSize = "100px";
+                    nextBtn.style.color = "#fff";
+                    nextBtn.style.backgroundColor = "transparent";
+                    nextBtn.style.border = "none";
+                    nextBtn.style.cursor = "pointer";
+                  nextBtn.onclick = function(e) {
+                    e.stopPropagation();
+                    currentImageIndex = (currentImageIndex + 1) % images.length;
+                    img.src = images[currentImageIndex];
+                  };
+
+                  overlay.appendChild(previousBtn);
+                  overlay.appendChild(img);
+                  overlay.appendChild(nextBtn);
+              
+                  document.body.appendChild(overlay);
+                }
+              </script>
+                </script>
+    </body>
+</html>
