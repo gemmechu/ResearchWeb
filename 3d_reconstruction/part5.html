@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body style="text-align: -webkit-center">
+        <div style="text-align: -webkit-left;">
+			<ul>
+
+                <li class="nav"><a href="index.html">Part 1</a></li>
+                <li class="nav"><a href="part2.html" >Part 5</a></li>
+                <li class="nav"><a href="part3.html">Part 3</a></li>
+                <li class="nav"><a href="part4.html">Part 4</a></li>
+                <li class="nav"><a href="part5.html" style="background-color: #27cece;">Part 5</a></li>
+            </ul>
+		</div>
+        <h2 >Debugging</h2>
+        <div>
+			<ul>
+                <li class="nav"><a href="part5.html" style="background-color: #33de58;">Mitsuba v3.3.0 vs v0.5.0</a></li>
+               <li class="nav"> <a href="part5b.html">Replicating IRON results</a></li>
+          
+            </ul>
+		</div>
+        <h2>Diffuse material</h2>
+        <table>
+            <tr>
+            <td><img src="data/part5/mitsuba_version_test/diffuse/0_diffuse_mitsuba_3_spectrum_20.png" alt="0_diffuse_mitsuba_3_spectrum_20.png" width="400"><p>0_diffuse_mitsuba_3_spectrum_20.png</p> </td>
+            <td><img src="data/part5/mitsuba_version_test/diffuse/0_diffuse_texture_mitsuba_3_rgb_20.png" alt="0_diffuse_texture_mitsuba_3_rgb_20.png" width="400"><p>0_diffuse_texture_mitsuba_3_rgb_20.png</p> </td>
+            <td><img src="data/part5/mitsuba_version_test/diffuse/0_diffuse_texture_mitsuba_3_spectrum_20.png" alt="0_diffuse_texture_mitsuba_3_spectrum_20.png" width="400"><p>0_diffuse_texture_mitsuba_3_spectrum_20.png</p> </td>
+            <td><img src="data/part5/mitsuba_version_test/diffuse/0_diffuse_mitsuba_0_5_rgb_20.png" alt="0_diffuse_mitsuba_0_5_rgb_20.png" width="400"><p>0_diffuse_mitsuba_0_5_rgb_20.png</p> </td>
+            </tr>
+            <tr>
+            <td><img src="data/part5/mitsuba_version_test/diffuse/0_diffuse_mitsuba_3_rgb_20.png" alt="0_diffuse_mitsuba_3_rgb_20.png" width="400"><p>0_diffuse_mitsuba_3_rgb_20.png</p> </td>
+            <td><img src="data/part5/mitsuba_version_test/diffuse/0_diffuse_mitsuba_0_5_rgb_20_0_0.png" alt="0_diffuse_mitsuba_0_5_rgb_20_0_0.png" width="400"><p>0_diffuse_mitsuba_0_5_rgb_20_0_0.png</p> </td>
+            <td><img src="data/part5/mitsuba_version_test/diffuse/0_diffuse_mitsuba_0_5_spectrum.png" alt="0_diffuse_mitsuba_0_5_spectrum.png" width="400"><p>0_diffuse_mitsuba_0_5_spectrum.png</p> </td>
+            </tr>
+            </table>
+            <br>
+        <h2>Roughplastic material</h2>
+        <table>
+            <tr>
+            <td><img src="data/part5/mitsuba_version_test/roughplastic/0_roughplastic_mitsuba_3_spectrum_nonlinearF_20.png" alt="0_roughplastic_mitsuba_3_spectrum_nonlinearF_20.png" width="400"><p>0_roughplastic_mitsuba_3_spectrum_nonlinearF_20.png</p> </td>
+            <td><img src="data/part5/mitsuba_version_test/roughplastic/0_roughplastic_mitsuba_0_5_spectrum_20_alpha_25.png" alt="0_roughplastic_mitsuba_0_5_spectrum_20_alpha_25.png" width="400"><p>0_roughplastic_mitsuba_0_5_spectrum_20_alpha_25.png</p> </td>
+            <td><img src="data/part5/mitsuba_version_test/roughplastic/0_roughplastic_mitsuba_0_5_spectrum_20_alpha_1.png" alt="0_roughplastic_mitsuba_0_5_spectrum_20_alpha_1.png" width="400"><p>0_roughplastic_mitsuba_0_5_spectrum_20_alpha_1.png</p> </td>
+            <td><img src="data/part5/mitsuba_version_test/roughplastic/0_roughplastic_mitsuba_3_rgb_nonlinear_20.png" alt="0_roughplastic_mitsuba_3_rgb_nonlinear_20.png" width="400"><p>0_roughplastic_mitsuba_3_rgb_nonlinear_20.png</p> </td>
+            </tr>
+            <tr>
+            <td><img src="data/part5/mitsuba_version_test/roughplastic/_roughplastic_mitsuba_3_rgb_20.png" alt="_roughplastic_mitsuba_3_rgb_20.png" width="400"><p>_roughplastic_mitsuba_3_rgb_20.png</p> </td>
+            </tr>
+            </table>
+
+
+            <script>
+                function expandImage(imgSrc, imgAlt) {
+                var overlay = document.createElement("div");
+                overlay.style.position = "fixed";
+                overlay.style.top = "0";
+                overlay.style.left = "0";
+                overlay.style.width = "100%";
+                overlay.style.height = "100%";
+                overlay.style.backgroundColor = "rgba(0,0,0,0.7)";
+                overlay.style.display = "flex";
+                overlay.style.justifyContent = "center";
+                overlay.style.alignItems = "center";
+                overlay.onclick = function() {overlay.parentNode.removeChild(overlay);};
+                var img = document.createElement("img");
+                img.src = imgSrc;
+                img.alt = imgAlt;
+                img.style.maxWidth = "90%";
+                img.style.maxHeight = "90%";
+                img.onclick = function(e) {e.stopPropagation();};
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+                }
+                </script>
+    </body>
+</html>
